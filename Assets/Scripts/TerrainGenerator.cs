@@ -31,8 +31,12 @@ public class TerrainGenerator : MonoBehaviour
         {
             float distanceBtwnPoints = scale / (float)numOfPoints;
             float xPos = shape.spline.GetPosition(i + 1).x + distanceBtwnPoints;
-            float randomNumber = Random.Range(4.0f, 8.0f);
-            
+            float randomNumber = Random.Range(4f, 6f);
+
+            if (i < 2)
+            {
+                randomNumber = Random.Range(shape.spline.GetPosition(2).y, shape.spline.GetPosition(2).y + 2);
+            }
             shape.spline.InsertPointAt(i + 2, new Vector3(xPos, height * Mathf.PerlinNoise(0, i * randomNumber)));
         }
 

@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 75748558}
   - component: {fileID: 75748557}
   - component: {fileID: 75748556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BackTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -416,7 +416,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.64, y: 15.488001, z: -10}
+  m_LocalPosition: {x: 6.64, y: 9.358001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -933,8 +933,8 @@ MonoBehaviour:
   shape: {fileID: 0}
   scale: 250
   smoothing: 2
-  height: 5
-  numofPoints: 75
+  height: 4
+  numOfPoints: 80
 --- !u!68 &664824265
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 1018268984}
   - component: {fileID: 1018268983}
   - component: {fileID: 1018268982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1027,14 +1027,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1022694, y: -0.45727873}
-      - {x: 1.1041638, y: -0.5366047}
-      - {x: 1.143903, y: -0.49567863}
-      - {x: 1.1297411, y: -0.46492338}
-      - {x: 1.1427624, y: -0.050052375}
+    - - {x: 1.1022694, y: -0.4200511}
+      - {x: 1.1320845, y: -0.42492276}
+      - {x: 1.1345961, y: -0.42742893}
+      - {x: 1.1328434, y: -0.37185526}
+      - {x: 1.1272509, y: -0.022132128}
       - {x: 1.0955244, y: -0.012224637}
-      - {x: 1.1419855, y: -0.01653906}
-      - {x: 1.0977666, y: 0.011294842}
+      - {x: 1.0985538, y: 0.0020747557}
+      - {x: 1.091562, y: 0.0050902367}
       - {x: 1.050825, y: 0.03663425}
       - {x: 0.88000655, y: 0.08494425}
       - {x: 0.6513342, y: 0.16353935}
@@ -1201,7 +1201,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1233,13 +1233,13 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.1022694, y: -0.45727873}
-      - {x: 1.1041638, y: -0.5366047}
-      - {x: 1.143903, y: -0.49567863}
-      - {x: 1.1297411, y: -0.46492338}
+      - {x: 1.1160144, y: -0.44179946}
+      - {x: 1.135015, y: -0.42457458}
+      - {x: 1.1415918, y: -0.41455793}
       - {x: 1.1427624, y: -0.050052375}
-      - {x: 1.0955244, y: -0.012224637}
-      - {x: 1.1419855, y: -0.01653906}
-      - {x: 1.0977666, y: 0.011294842}
+      - {x: 1.1192257, y: -0.02703806}
+      - {x: 1.1434046, y: -0.045331918}
+      - {x: 1.1096174, y: 0.0053696632}
       - {x: 1.050825, y: 0.03663425}
       - {x: 0.88000655, y: 0.08494425}
       - {x: 0.6513342, y: 0.16353935}
@@ -1403,7 +1403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208195707}
   - component: {fileID: 1208195706}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: A.I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,12 +1425,9 @@ MonoBehaviour:
   frontTire: {fileID: 1299279954}
   backTire: {fileID: 75748554}
   car: {fileID: 1018268981}
-  speed: 100
-  maxSpeed: 1750
+  speed: 120
+  maxSpeed: 1900
   flipForce: 20
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
   leftPoint: {fileID: 2035647740}
   rightPoint: {fileID: 1970000950}
 --- !u!4 &1208195707
@@ -1441,7 +1438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208195705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 13.43, z: -0.18533763}
+  m_LocalPosition: {x: 6.5, y: 7.3, z: -0.18533763}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1552,7 +1549,7 @@ GameObject:
   - component: {fileID: 1299279958}
   - component: {fileID: 1299279957}
   - component: {fileID: 1299279956}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FrontTire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1610,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1761,7 +1758,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1844,7 +1841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970000950}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rightPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2035647740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leftPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
