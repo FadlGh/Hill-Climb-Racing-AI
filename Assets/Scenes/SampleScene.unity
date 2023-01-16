@@ -935,6 +935,7 @@ MonoBehaviour:
   smoothing: 2
   height: 4
   numOfPoints: 80
+  Boxes: {fileID: 7747257364666548400, guid: 663b39dbd7cc94e43879d194600f59d8, type: 3}
 --- !u!68 &664824265
 EdgeCollider2D:
   m_ObjectHideFlags: 0
