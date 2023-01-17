@@ -39,13 +39,13 @@ public class AIscript : MonoBehaviour
 
     private bool isStuck()
     {
-        return Mathf.Abs(carRb.velocity.x) < 1;
+        return Mathf.Abs(carRb.velocity.x) < 1.2f;
     }
 
     private void directionFunction()
     {
         rightHit[0] = Physics2D.Raycast(rightPoint.position, new Vector3(1, 0, 0), 1.5f);
-        rightHit[1] = Physics2D.Raycast(rightPoint.position, new Vector3(1, 0.7f, 0), 1.5f);
+        rightHit[1] = Physics2D.Raycast(rightPoint.position, new Vector3(1, 0.65f, 0), 1.5f);
         rightHit[2] = Physics2D.Raycast(rightPoint.position, new Vector3(1, -1, 0));
 
         leftHit[0] = Physics2D.Raycast(leftPoint.position, new Vector3(-1, 0, 0));
@@ -91,12 +91,12 @@ public class AIscript : MonoBehaviour
 
     private IEnumerator MoveBackward()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         if (isStuck())
         {
             needReturn = true;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.8f);
         needReturn = false;
     }
 
@@ -109,7 +109,7 @@ public class AIscript : MonoBehaviour
     {
         directionFunction();
         Debug.DrawRay(rightPoint.position, new Vector3(1, 0, 0), Color.red);
-        Debug.DrawRay(rightPoint.position, new Vector3(1, 0.7f, 0), Color.red);
+        Debug.DrawRay(rightPoint.position, new Vector3(1, 0.65f, 0), Color.red);
         Debug.DrawRay(rightPoint.position, new Vector3(1, -1, 0), Color.red);
 
         if (Mathf.Abs(frontTireRb.angularVelocity) < maxSpeed & Mathf.Abs(backTireRb.angularVelocity) < maxSpeed)
@@ -121,16 +121,14 @@ public class AIscript : MonoBehaviour
             }
             if(!isStuck() & !isFlipped())
             {
-                carRb.AddForce(5 * direction * Vector2.right);
-
                 frontTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
                 backTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
+                print("sui");
             }
             if (needReturn)
             {
                 frontTireRb.AddTorque(speed * Time.fixedDeltaTime);
                 backTireRb.AddTorque(speed * Time.fixedDeltaTime);
-                print("sui");
                 return;
             }
             if (isStuck())
