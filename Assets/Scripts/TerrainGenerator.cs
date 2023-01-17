@@ -20,6 +20,8 @@ public class TerrainGenerator : MonoBehaviour
     [Range(0, 500)]
     public int numOfPoints;
 
+    [Range(0, 10)]
+    public int numOfBoxes;
     public GameObject Boxes;
     // Start is called before the first frame update
     void Start()
@@ -39,12 +41,6 @@ public class TerrainGenerator : MonoBehaviour
                 randomNumber = Random.Range(shape.spline.GetPosition(2).y, shape.spline.GetPosition(2).y + 2);
             }
             shape.spline.InsertPointAt(i + 2, new Vector3(xPos, height * Mathf.PerlinNoise(0, i * randomNumber)));
-
-            if(i == 40)
-            {
-                Vector3 Pos = shape.spline.GetPosition(i) + new Vector3(0, 10, 0);
-                Instantiate(Boxes, Pos, Quaternion.identity);
-            }
         }
 
         for (int i = 2; i <= numOfPoints + 2; i++)
@@ -52,6 +48,12 @@ public class TerrainGenerator : MonoBehaviour
             shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
             shape.spline.SetLeftTangent(i, new Vector3(-smoothing, 0, 0));
             shape.spline.SetRightTangent(i, new Vector3(smoothing, 0, 0));
+        }
+
+        for (int i = 0; i <= numOfBoxes; i++)
+        {
+            Vector3 Pos = shape.spline.GetPosition(Random.Range(10, numOfPoints - 10)) + new Vector3(0, 20, 0);
+            Instantiate(Boxes, Pos, Quaternion.identity);
         }
     }
 }
