@@ -146,9 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &516586085082414926
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,9 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &661004052467348536
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,9 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &2614985863941136285
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,9 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &4313571489915182874
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,9 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &6694940487624582800
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,9 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &7270347521229723040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,9 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570ba279889225745a084f5a6d2e3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
+  ps: {fileID: 7062389653056883760, guid: 48e1ee3da8b4adb4c8e50936ca8a0027, type: 3}
 --- !u!1 &7747257364666548400
 GameObject:
   m_ObjectHideFlags: 0

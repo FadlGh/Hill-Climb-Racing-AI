@@ -123,7 +123,6 @@ public class AIscript : MonoBehaviour
             {
                 frontTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
                 backTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
-                print("sui");
             }
             if (needReturn)
             {

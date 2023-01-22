@@ -52,7 +52,7 @@ public class TerrainGenerator : MonoBehaviour
 
         for (int i = 0; i <= numOfBoxes; i++)
         {
-            Vector3 Pos = shape.spline.GetPosition(Random.Range(10, numOfPoints - 10)) + new Vector3(0, 20, 0);
+            Vector3 Pos = shape.spline.GetPosition(Random.Range(10, numOfPoints - 10)) + new Vector3(0, 5, 0);
             Instantiate(Boxes, Pos, Quaternion.identity);
         }
     }
