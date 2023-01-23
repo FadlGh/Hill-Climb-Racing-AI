@@ -6,10 +6,9 @@ public class Box : MonoBehaviour
 {
     public ParticleSystem ps;
     private void OnCollisionEnter2D(Collision2D collision)
-    {      
+    {
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null & collision.gameObject.GetComponent<Box>() == null)
         {
-            print(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x);
             if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x > 1.5f)
             {
                 Destroy(gameObject);
@@ -18,4 +17,3 @@ public class Box : MonoBehaviour
         }
     }
 }
-
