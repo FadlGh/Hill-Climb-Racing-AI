@@ -7,7 +7,6 @@ public class FinishLine : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("s");
         if(collision.gameObject.GetComponent<Rigidbody2D>() != null)
         {
             StartCoroutine(finish());
@@ -15,7 +14,7 @@ public class FinishLine : MonoBehaviour
 
         IEnumerator finish()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             SceneManager.LoadScene("UI");
         }
     }

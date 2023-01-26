@@ -100,11 +100,6 @@ public class AIscript : MonoBehaviour
         needReturn = false;
     }
 
-    private bool isFlipped()
-    {
-        return car.transform.rotation.z > 90 & car.transform.rotation.z < -90;
-    }
-
     void FixedUpdate()
     {
         directionFunction();
@@ -114,12 +109,7 @@ public class AIscript : MonoBehaviour
 
         if (Mathf.Abs(frontTireRb.angularVelocity) < maxSpeed & Mathf.Abs(backTireRb.angularVelocity) < maxSpeed)
         {
-            if (isFlipped())
-            {
-                car.transform.Rotate(new Vector3(0, 0, 0));
- 
-            }
-            if(!isStuck() & !isFlipped())
+            if(!isStuck())
             {
                 frontTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
                 backTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
