@@ -42,16 +42,19 @@ public class TerrainGenerator : MonoBehaviour
             {
                 randomNumber = Random.Range(shape.spline.GetPosition(2).y, shape.spline.GetPosition(2).y + 2);
             }
+            //Using perlin noise to make random hills
             shape.spline.InsertPointAt(i + 2, new Vector3(xPos, height * Mathf.PerlinNoise(0, i * randomNumber)));
 
             if (i == numOfPoints - 1)
             {
+                //Creating the finish line
                 Instantiate(finishLine, shape.spline.GetPosition(i) + new Vector3(0, 0.5f, 0), Quaternion.identity);
             }
         }
 
         for (int i = 2; i <= numOfPoints + 2; i++)
         {
+            //Add smoothing to the hills
             shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
             shape.spline.SetLeftTangent(i, new Vector3(-smoothing, 0, 0));
             shape.spline.SetRightTangent(i, new Vector3(smoothing, 0, 0));
@@ -59,8 +62,9 @@ public class TerrainGenerator : MonoBehaviour
 
         for (int i = 0; i <= numOfBoxes; i++)
         {
+            //Spawning random boxes to decrease the player speed
             Vector3 Pos = shape.spline.GetPosition(Random.Range(10, numOfPoints - 10)) + new Vector3(0, 5, 0);
-            Instantiate(Boxes, Pos, Quaternion.identity);
+            Instantiate(Boxes, Pos - new Vector3(0, 2, 0), Quaternion.identity);
         }
     }
 }

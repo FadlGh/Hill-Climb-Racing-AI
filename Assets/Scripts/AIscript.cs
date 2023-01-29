@@ -39,6 +39,7 @@ public class AIscript : MonoBehaviour
 
     private bool isStuck()
     {
+        //Check A.I. speed
         return Mathf.Abs(carRb.velocity.x) < 1.2f;
     }
 
@@ -48,10 +49,12 @@ public class AIscript : MonoBehaviour
         rightHit[1] = Physics2D.Raycast(rightPoint.position, new Vector3(1, 0.65f, 0), 1.5f);
         rightHit[2] = Physics2D.Raycast(rightPoint.position, new Vector3(1, -1, 0));
 
+        //Three diagonal lines to check the direction to go if stuck
+
         leftHit[0] = Physics2D.Raycast(leftPoint.position, new Vector3(-1, 0, 0));
         leftHit[1] = Physics2D.Raycast(leftPoint.position, new Vector3(-1, 0.5f, 0));
         leftHit[2] = Physics2D.Raycast(leftPoint.position, new Vector3(-1, -1, 0));
-
+        
         for (int i = 0; i < rightHit.Length; i++)
         {
             if (rightHit[i])
@@ -111,6 +114,7 @@ public class AIscript : MonoBehaviour
         {
             if(!isStuck())
             {
+                //Move Forward
                 frontTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
                 backTireRb.AddTorque(-1 * speed * Time.fixedDeltaTime);
             }
